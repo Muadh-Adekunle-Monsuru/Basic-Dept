@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'SctoRegular';
+	font-weight: bold;
+	src: url('./assets/fonts/SctoMedium.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'SctoMedium';
+	src: url('./assets/fonts/SctoBold.woff2') format('woff2');
+}
