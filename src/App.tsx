@@ -19,38 +19,36 @@ function App() {
 	return (
 		<>
 			<Header headerInView={headerInView} />
-			<HeavenScroll velocity={0.01}>
-				<main
-					className={`bg-noise bg-repeat font-SctoRegular selection:bg-black selection:text-white ${
-						inView ? 'bg-[#252422] text-pink-200' : 'bg-[#f4f4f4]'
-					}  transition duration-1000 `}
-				>
-					<div ref={ref2}>
-						<Jumbo />
+			<main
+				className={`bg-noise bg-repeat font-SctoRegular selection:bg-black selection:text-white ${
+					inView ? 'bg-[#252422] text-pink-200' : 'bg-[#f4f4f4]'
+				}  transition duration-1000 `}
+			>
+				<div ref={ref2}>
+					<Jumbo />
+				</div>
+				<Section2 />
+				<div className='flex lg:px-20 px-5 items-center justify-center'>
+					<div className=' border-b-2 border-black/70 w-full ' />
+				</div>
+				<Section3 />
+				<div className='flex flex-col lg:px-20 px-5 items-center justify-center'>
+					<div className=' border-b-2 border-black/70 w-full ' />
+					<div className='flex justify-between w-full py-5 select-none blur-[0.35px] text-sm'>
+						<p className='w-1/4 '>00</p>
+						<p className='w-1/2'>/05</p>
+						<p>
+							<PlusCircleIcon className='w-3 bg-black rounded-full' />
+						</p>
 					</div>
-					<Section2 />
-					<div className='flex lg:px-20 px-5 items-center justify-center'>
-						<div className=' border-b-2 border-black/70 w-full ' />
-					</div>
-					<Section3 />
-					<div className='flex flex-col lg:px-20 px-5 items-center justify-center'>
-						<div className=' border-b-2 border-black/70 w-full ' />
-						<div className='flex justify-between w-full py-5 select-none blur-[0.35px] text-sm'>
-							<p className='w-1/4 '>00</p>
-							<p className='w-1/2'>/05</p>
-							<p>
-								<PlusCircleIcon className='w-3 bg-black rounded-full' />
-							</p>
-						</div>
-					</div>
-					<Section4 inView={inView} />
-					<div ref={ref}>
-						<Section5 />
-					</div>
-					<Section6 />
-					<Footer />
-				</main>
-			</HeavenScroll>
+				</div>
+				<Section4 inView={inView} />
+				<div ref={ref}>
+					<Section5 />
+				</div>
+				<Section6 />
+				<Footer />
+			</main>
 		</>
 	);
 }
