@@ -19,7 +19,7 @@ function App() {
 	return (
 		<>
 			<Header headerInView={headerInView} />
-			<HeavenScroll velocity={0.06}>
+			<HeavenScroll velocity={0.01}>
 				<main
 					className={`bg-noise bg-repeat font-SctoRegular selection:bg-black selection:text-white ${
 						inView ? 'bg-[#252422] text-pink-200' : 'bg-[#f4f4f4]'
